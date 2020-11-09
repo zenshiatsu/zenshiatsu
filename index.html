@@ -7,11 +7,11 @@
 <style>
 body {
   background:  #fff url('ui/bg2.png') center center no-repeat;
-  color: rgba(255, 255, 255, 1);
   height: 100vh;
   width: 100vw;
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 #waves {
@@ -30,6 +30,33 @@ body {
   padding: 0;
   font-weight: 100;
 }
+
+
+@media (pointer:coarse) {
+    .which-pointer::after {
+        content: "You have a coarse pointer, are you on a touchscreen device?";    
+    } 
+}
+
+@media (pointer:fine) {
+    .which-pointer::after {
+        content: "You have a fine pointer, are you using a mouse or trackpad?";    
+    } 
+}
+
+@media (hover) {
+    .can-i-hover::after {
+        content: "You look like you can hover.";    
+    } 
+}
+
+@media  (hover:none) {
+    .can-i-hover::after {
+        content: "I don't think you can hover.";    
+    } 
+}
+
+
 </style>
 </head>
 <body>
@@ -45,6 +72,7 @@ $(function(){
       speed: 2,
 
       width: function() {
+        alert($(window).width());
         return $(window).width();
         //return screen.width * (window.devicePixelRatio || 1);
         //return 1200;
