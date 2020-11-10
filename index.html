@@ -11,7 +11,7 @@
 
         #title {
           font-family: 'Raleway', sans-serif;
-          color: #fff;
+  
           position: fixed;
           top: 10px;
           left: 10px;
@@ -24,6 +24,7 @@
         }
 
         body {
+          color: #fff;
           text-align: center;
           height: 100vh;
           width: 100vw;
@@ -48,15 +49,20 @@
         #waves {
             width: 300px;
             height: 300px;
-            border: 1px;
-            background: #fff url('ui/zenshiatsu-enso.png');
+            background: url('ui/zenshiatsu-enso.png');
         }
+
+        /* Smartphones ----------- */
+        @media only screen and (max-width: 760px) {
+            #mobile-checker { display: none; }
+        }
+
 
         </style>
     </head>
 
     <body>
-
+        <div id="mobile-checker">mobile checker</div>
         <h1 id="title">zenshiatsu</h1>
 
         <div id="top"></div>
@@ -73,7 +79,49 @@
         <script src="ui/sine-waves.min.js"></script>
 
         <script>
+
+var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i) || navigator.userAgent.match(/WPDesktop/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    },
+    mac: function IsSafari() {
+        var is_safari = navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+        return is_safari;
+        },
+};
+
+// if( isMobile.mac() ) alert('mac');
+
+if( isMobile.any() )  {
+  var zzz = '100%';
+} else {
+  var zzz = '200%';
+};
+
+
+
+
         $(function(){
+
+          // alert(zzz);
+
+          console.debug('MAIN function')
+
             var waves = new SineWaves({
               el: document.getElementById('waves'),
 
@@ -89,7 +137,28 @@
                 return 600;
               },
 
-              wavesWidth: '175%',
+              // wavesWidth: '200%',
+
+              wavesWidth: function() {
+
+                  return '200%';
+                  alert('mac')
+
+                //return 600;
+              },
+
+              
+              
+              // alert('mac')
+              wavesWidth: zzz,
+              // wavesWidth: '200%',
+
+              // console.debug('wavesWidth'),
+
+  
+
+
+              
 
               ease: 'SineInOut',
 
@@ -98,7 +167,7 @@
         {
           timeModifier: 1.5,
           lineWidth: 1,
-          amplitude: 70,
+          amplitude: -65,
           wavelength: 120,
           segmentLength: 1,
         },
@@ -176,9 +245,13 @@
 */
               initialize: function (){
 
+                console.debug('initialize')
+
               },
 
               resizeEvent: function() {
+
+                console.debug('resizeEvent')
 
                 var index = -1;
                 var length = this.waves.length;
