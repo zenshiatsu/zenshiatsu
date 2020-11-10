@@ -108,9 +108,13 @@ var isMobile = {
 // if( isMobile.mac() ) alert('mac');
 
 if( isMobile.any() )  {
-  var zzz = '100%';
+  var zwavesWidth = '100%';
+  var zwidth = 150;
+  var zheight = 300;
 } else {
-  var zzz = '200%';
+  var zwavesWidth = '200%';
+  var zwidth = 300;
+  var zheight = 600;
 };
 
 
@@ -129,12 +133,12 @@ if( isMobile.any() )  {
 
               width: function() {
                 //return $(window).width();
-                return 300;
+                return zwidth;
               },
 
               height: function() {
                 //return $(window).height();
-                return 600;
+                return zheight;
               },
 
               // wavesWidth: '200%',
@@ -150,7 +154,7 @@ if( isMobile.any() )  {
               
               
               // alert('mac')
-              wavesWidth: zzz,
+              wavesWidth: zwavesWidth,
               // wavesWidth: '200%',
 
               // console.debug('wavesWidth'),
