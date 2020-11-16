@@ -236,9 +236,11 @@ $(function(){
 
     if (randomColor === 'light') {
         style = 'rgba(255, 255, 255, 1)';
+        circle.classList.remove('darkC');
         circle.classList.add("lightC");
     } else {
         style = 'rgba(1, 1, 1, 1)';
+        circle.classList.remove('lightC');
         circle.classList.add("darkC");
     }
 
