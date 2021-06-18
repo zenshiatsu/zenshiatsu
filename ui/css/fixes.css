@@ -1,0 +1,41 @@
+/* disable cursos for mobile devices */
+
+@media only screen 
+ and (min-device-width: 1024px) 
+ and (max-device-width: 1024px) 
+ and (orientation: portrait) 
+ and (-webkit-min-device-pixel-ratio: 2) {
+
+body {
+   cursor: default;
+}
+
+.cursor-wrapper {
+   display: none;
+}
+
+a {
+   cursor: pointer;
+}
+}
+
+@media only screen 
+ and (min-device-width: 1366px) 
+ and (max-device-width: 1366px) 
+ and (orientation: landscape) 
+ and (-webkit-min-device-pixel-ratio: 2) {
+ 
+body {
+   cursor: default;
+}
+
+.cursor-wrapper {
+   display: none;
+}
+
+a {
+   cursor: pointer;
+}
+}
+
+
