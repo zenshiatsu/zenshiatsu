@@ -274,9 +274,12 @@ header {
 .sectiontitle {
   padding: 0;
   margin: 0;
-  font-size: smaller;
+  /* font-size: 3vmin; */
+  font-size: calc(16px + 1.5vw);
   width: 100%;
+  /* background-color: aqua; */
 }
+
 
 
 footer {
@@ -436,6 +439,7 @@ img.logos {
 .card .price {
   font-size: 1.4rem;
   font-weight: 700;
+
 }
 
 strong {
