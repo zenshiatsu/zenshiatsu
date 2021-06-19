@@ -275,7 +275,8 @@ header {
   padding: 0;
   margin: 0;
   /* font-size: 3vmin; */
-  font-size: calc(16px + 1.5vw);
+  font-size: 1.65rem;
+  /* font-size: calc(16px + 1.5vw); */
   width: 100%;
   /* background-color: aqua; */
 }
