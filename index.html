@@ -116,7 +116,7 @@
       <div class="text">
           <h2 class="sectiontitle">Shiatsu</h2>
           <p>A shiatsu a hagyományos japán anma masszázs és a kínai orvoslás ötvözete. A szó maga egy japán kifejezés, ujjal történő nyomást jelent. Az egyszerűség kedvéért masszázsként kategorizálják, valójában viszont jóval több annál.</p>
-          <p>A Hagyományos Kínai Orvoslás szerint a testben az energia a meridián vonalak mentén áramlik. Ha nincs szabad áramlás, „betegségek” alakulnak ki.</p>
+          <p>A Hagyományos Kínai Orvoslás szerint a testben az energia meridián vonalak mentén áramlik. Ha nincs szabad áramlás, „betegségek” alakulnak ki.</p>
           <p>A shiatsu hozzájárul ahhoz, hogy a testben áramló energiának semmi ne álljon az útjába.</p>
           <p>A kezelés során ujjal, tenyérrel, könyökkel és térddel adok nyomást, nem izomerőt, hanem a saját testsúlyomat használva. A nyomások mellett a nyújtásoknak is fontos szerep jut a krónikus stagnálások és blokkok oldásában.</p>
       </div>
@@ -150,7 +150,7 @@
 
   <div class="holder">
       <div class="picture">
-        <img src="content/back2.jpg" alt="" />
+        <img src="content/back.jpg" alt="" />
       </div>
       <div class="text">
           <p>A shiatsu teljes testes kezelés, és minden alkalommal más, hiszen a te állapotod sem állandó. A shiatsu az élet állandó változásaihoz igyekszik alkalmazkodni és azt adni neked, amire az adott pillanatban épp szükséged van.</p>
@@ -176,7 +176,7 @@
       <div class="text">
         <h3 class="sectiontitle">Bemutatkozás</h3>
         <p>Szabó Nóra vagyok. Életem első shiatsu kezelését 2018-ban Tóth Dalmától kaptam. Hatására szinte azonnal be is iratkoztam a budapesti Nemzetközi Shiatsu Iskolába. Az alaptanfolyam elvégzése után közel 300 tanórányi anyagot sajátítottam el a Shiatsu Iskola elméleti és főképp gyakorlati shiatsu szakképzése során. Szeretettel és hálával gondolok tanáraimra, Madocsai Eszterre, Gulyás Viktorra, Darin Ágnesre, és Imre Zoltánra.</p>
-        <p>A Magar Shiatsu Társaság tagjaként shiatsu-val kapcsolatos tartalmak, cikkek, könyvek fordításán dolgozom.</p>
+        <p>A Magyar Shiatsu Társaság tagjaként shiatsu-val kapcsolatos tartalmak, cikkek, könyvek fordításán dolgozom.</p>
       </div>
   </div>
 
@@ -334,25 +334,7 @@
 <div id="fb-customer-chat" class="fb-customerchat">
 </div>
 
-<script>
-  var chatbox = document.getElementById('fb-customer-chat');
-  chatbox.setAttribute("page_id", "108377287260909");
-  chatbox.setAttribute("attribution", "biz_inbox");
-  window.fbAsyncInit = function() {
-    FB.init({
-      xfbml            : true,
-      version          : 'v11.0'
-    });
-  };
 
-  (function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/hu_HU/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));
-</script>
 
 
 
@@ -384,9 +366,28 @@ document.querySelectorAll('.nav__item a[href^="#"]')
             top: offsetPosition,
             behavior: "smooth"
         });
+
     };
 });
 
+// facebook messenger stuff
+var chatbox = document.getElementById('fb-customer-chat');
+chatbox.setAttribute("page_id", "108377287260909");
+chatbox.setAttribute("attribution", "biz_inbox");
+window.fbAsyncInit = function() {
+  FB.init({
+    xfbml            : true,
+    version          : 'v11.0'
+  });
+};
+
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/hu_HU/sdk/xfbml.customerchat.js';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 </script>
 
 </body>
