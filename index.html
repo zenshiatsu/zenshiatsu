@@ -47,14 +47,44 @@
 
 
 <style>
+  .background {
+    background-image: url('./content/cover/DSC04142_.jpg');
+    background-size: cover;
+    object-fit: cover;
+  }
+
   .background img {
-  width: 100%;
-  max-width: 3000px;
-  height: 100%;
-  object-fit: cover;
-  background-color: none;
-  object-position: top left;
+    width: 100%;
+    max-width: 3000px;
+    height: 100%;
+    object-fit: cover;
+    background-color: none;
+    /* object-position: top left; */
+  }
+
+
+.pulse {
+    animation: pulse 12s infinite;
 }
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+  70% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 
 .welcome {
   background-color: transparent;
@@ -71,7 +101,7 @@
 </style>
 <section class="background">
     <!-- <div id="circle"></div> -->
-    <img class="cover" src="./content/cover/DSC04142_.jpg" alt="" />
+    <img class="cover pulse" src="./content/cover/DSC04144_.jpg" alt="" />
 </section>
 
 
