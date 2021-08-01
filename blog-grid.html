@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+	<link rel="stylesheet" href="./ui/css/rereset.css">
+</head>
+
+
+
+<style>
+
+body {
+	/* margin: 40px; */
+}
+
+main {
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.sidebar {
+	grid-area: sidebar;
+}
+
+aside {
+	grid-area: sidebar2;
+}
+
+.content {
+	grid-area: content;
+}
+
+header {
+	grid-area: header;
+}
+
+footer {
+	grid-area: footer;
+}
+
+main {
+	background-color: #fff;
+}
+
+
+
+main {
+	display: grid;
+	grid-gap: 1em;
+	grid-template-areas:
+		"header"
+		"sidebar"
+		"content"
+		"sidebar2"
+		"footer"
+}
+
+/* responsive grid */
+@media only screen and (min-width: 500px)  {
+	main {
+		grid-template-columns: 20% auto;
+		grid-template-areas:
+			"header   header"
+			"sidebar  content"
+			"sidebar2 sidebar2"
+			"footer   footer";
+	}
+}
+@media only screen and (min-width: 600px)   {
+	main {
+		grid-gap: 20px;
+			grid-template-columns: 120px auto 120px;
+			grid-template-areas:
+				"header  header  header"
+				"sidebar content sidebar2"
+				"footer  footer  footer";
+			max-width: 600px;
+	}
+}
+
+
+.box {
+	background-color: #444;
+	color: #fff;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 150%; 
+}
+
+
+
+
+header,
+footer {
+	background-color: #999;
+}
+
+aside {
+	background-color: #ccc;
+	color: #444;
+}
+	
+	
+</style>
+<body>
+
+
+
+
+
+<main>
+
+	<header>
+		HEADER
+	</header>
+
+	<section class="sidebar">
+		sidebar
+	</section>
+
+	<section class="conent">
+	CONTENT
+		<div>
+			title
+		</div>
+		<div>
+			body
+		</div>
+
+	</section>
+
+	<aside>
+	ASIDE
+	</aside>
+
+	<footer>
+		FOOTER
+	</footer>
+
+</main>
+
+
+
+
+
+
+
+
+</body>
+</html>
