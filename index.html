@@ -11,15 +11,11 @@
 </head>
 
 <body>
-
     <main>
-
         <header>
             <nav role="navigation">
-
                 <div id="menuToggle">
                     <input id="closeIcon" type="checkbox" />
-
                     <style>
                         .circle {
                             position: absolute;
@@ -158,268 +154,6 @@
           <a href="#" target="_blank">messenger</a>
         </div> -->
 
-                        <style>
-                            #scroll-wrapper {
-                                position: absolute;
-                                bottom: 0;
-                                left: 1px;
-                                display: table;
-                                z-index: 9;
-                                pointer-events: none;
-                            }
-                            
-                            #scroll-wrapper-inner {
-                                display: table-cell;
-                                vertical-align: bottom;
-                                width: 100%;
-                                height: 100%;
-                            }
-                            
-                            #scroll-down {
-                                display: block;
-                                position: relative;
-                                padding-top: 79px;
-                                text-align: center;
-                            }
-                            
-                            #scroll-title {
-                                display: block;
-                                text-transform: uppercase;
-                                color: #FFF;
-                                font-family: "Courier-Prime", sans-serif;
-                                font-size: 14px;
-                                font-weight: 600;
-                                letter-spacing: 0.4em;
-                                text-align: center;
-                                transform: rotate(90deg);
-                                margin-bottom: 45px;
-                            }
-                            
-                            #scroll-down::before {
-                                -webkit-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
-                                -moz-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
-                                -o-animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
-                                animation: elasticus 2.9s cubic-bezier(1, 0, 0, 1) infinite;
-                                position: absolute;
-                                top: 0px;
-                                left: 50%;
-                                margin-left: -1px;
-                                width: 2px;
-                                height: 90px;
-                                background: #FFF;
-                                content: ' ';
-                            }
-                            
-                            @-webkit-keyframes elasticus {
-                                0% {
-                                    -webkit-transform-origin: 0% 0%;
-                                    -ms-transform-origin: 0% 0%;
-                                    -moz-transform-origin: 0% 0%;
-                                    -o-transform-origin: 0% 0%;
-                                    transform-origin: 0% 0%;
-                                    -webkit-transform: scale(1, 0);
-                                    -ms-transform: scale(1, 0);
-                                    -moz-transform: scale(1, 0);
-                                    -o-transform: scale(1, 0);
-                                    transform: scale(1, 0);
-                                }
-                                50% {
-                                    -webkit-transform-origin: 0% 0%;
-                                    -ms-transform-origin: 0% 0%;
-                                    -moz-transform-origin: 0% 0%;
-                                    -o-transform-origin: 0% 0%;
-                                    transform-origin: 0% 0%;
-                                    -webkit-transform: scale(1, 1);
-                                    -ms-transform: scale(1, 1);
-                                    -moz-transform: scale(1, 1);
-                                    -o-transform: scale(1, 1);
-                                    transform: scale(1, 1);
-                                }
-                                50.1% {
-                                    -webkit-transform-origin: 0% 100%;
-                                    -ms-transform-origin: 0% 100%;
-                                    -moz-transform-origin: 0% 100%;
-                                    -o-transform-origin: 0% 100%;
-                                    transform-origin: 0% 100%;
-                                    -webkit-transform: scale(1, 1);
-                                    -ms-transform: scale(1, 1);
-                                    -moz-transform: scale(1, 1);
-                                    -o-transform: scale(1, 1);
-                                    transform: scale(1, 1);
-                                }
-                                100% {
-                                    -webkit-transform-origin: 0% 100%;
-                                    -ms-transform-origin: 0% 100%;
-                                    -moz-transform-origin: 0% 100%;
-                                    -o-transform-origin: 0% 100%;
-                                    transform-origin: 0% 100%;
-                                    -webkit-transform: scale(1, 0);
-                                    -ms-transform: scale(1, 0);
-                                    -moz-transform: scale(1, 0);
-                                    -o-transform: scale(1, 0);
-                                    transform: scale(1, 0);
-                                }
-                            }
-                            
-                            @-moz-keyframes elasticus {
-                                0% {
-                                    -webkit-transform-origin: 0% 0%;
-                                    -ms-transform-origin: 0% 0%;
-                                    -moz-transform-origin: 0% 0%;
-                                    -o-transform-origin: 0% 0%;
-                                    transform-origin: 0% 0%;
-                                    -webkit-transform: scale(1, 0);
-                                    -ms-transform: scale(1, 0);
-                                    -moz-transform: scale(1, 0);
-                                    -o-transform: scale(1, 0);
-                                    transform: scale(1, 0);
-                                }
-                                50% {
-                                    -webkit-transform-origin: 0% 0%;
-                                    -ms-transform-origin: 0% 0%;
-                                    -moz-transform-origin: 0% 0%;
-                                    -o-transform-origin: 0% 0%;
-                                    transform-origin: 0% 0%;
-                                    -webkit-transform: scale(1, 1);
-                                    -ms-transform: scale(1, 1);
-                                    -moz-transform: scale(1, 1);
-                                    -o-transform: scale(1, 1);
-                                    transform: scale(1, 1);
-                                }
-                                50.1% {
-                                    -webkit-transform-origin: 0% 100%;
-                                    -ms-transform-origin: 0% 100%;
-                                    -moz-transform-origin: 0% 100%;
-                                    -o-transform-origin: 0% 100%;
-                                    transform-origin: 0% 100%;
-                                    -webkit-transform: scale(1, 1);
-                                    -ms-transform: scale(1, 1);
-                                    -moz-transform: scale(1, 1);
-                                    -o-transform: scale(1, 1);
-                                    transform: scale(1, 1);
-                                }
-                                100% {
-                                    -webkit-transform-origin: 0% 100%;
-                                    -ms-transform-origin: 0% 100%;
-                                    -moz-transform-origin: 0% 100%;
-                                    -o-transform-origin: 0% 100%;
-                                    transform-origin: 0% 100%;
-                                    -webkit-transform: scale(1, 0);
-                                    -ms-transform: scale(1, 0);
-                                    -moz-transform: scale(1, 0);
-                                    -o-transform: scale(1, 0);
-                                    transform: scale(1, 0);
-                                }
-                            }
-                            
-                            @-o-keyframes elasticus {
-                                0% {
-                                    -webkit-transform-origin: 0% 0%;
-                                    -ms-transform-origin: 0% 0%;
-                                    -moz-transform-origin: 0% 0%;
-                                    -o-transform-origin: 0% 0%;
-                                    transform-origin: 0% 0%;
-                                    -webkit-transform: scale(1, 0);
-                                    -ms-transform: scale(1, 0);
-                                    -moz-transform: scale(1, 0);
-                                    -o-transform: scale(1, 0);
-                                    transform: scale(1, 0);
-                                }
-                                50% {
-                                    -webkit-transform-origin: 0% 0%;
-                                    -ms-transform-origin: 0% 0%;
-                                    -moz-transform-origin: 0% 0%;
-                                    -o-transform-origin: 0% 0%;
-                                    transform-origin: 0% 0%;
-                                    -webkit-transform: scale(1, 1);
-                                    -ms-transform: scale(1, 1);
-                                    -moz-transform: scale(1, 1);
-                                    -o-transform: scale(1, 1);
-                                    transform: scale(1, 1);
-                                }
-                                50.1% {
-                                    -webkit-transform-origin: 0% 100%;
-                                    -ms-transform-origin: 0% 100%;
-                                    -moz-transform-origin: 0% 100%;
-                                    -o-transform-origin: 0% 100%;
-                                    transform-origin: 0% 100%;
-                                    -webkit-transform: scale(1, 1);
-                                    -ms-transform: scale(1, 1);
-                                    -moz-transform: scale(1, 1);
-                                    -o-transform: scale(1, 1);
-                                    transform: scale(1, 1);
-                                }
-                                100% {
-                                    -webkit-transform-origin: 0% 100%;
-                                    -ms-transform-origin: 0% 100%;
-                                    -moz-transform-origin: 0% 100%;
-                                    -o-transform-origin: 0% 100%;
-                                    transform-origin: 0% 100%;
-                                    -webkit-transform: scale(1, 0);
-                                    -ms-transform: scale(1, 0);
-                                    -moz-transform: scale(1, 0);
-                                    -o-transform: scale(1, 0);
-                                    transform: scale(1, 0);
-                                }
-                            }
-                            
-                            @keyframes elasticus {
-                                0% {
-                                    -webkit-transform-origin: 0% 0%;
-                                    -ms-transform-origin: 0% 0%;
-                                    -moz-transform-origin: 0% 0%;
-                                    -o-transform-origin: 0% 0%;
-                                    transform-origin: 0% 0%;
-                                    -webkit-transform: scale(1, 0);
-                                    -ms-transform: scale(1, 0);
-                                    -moz-transform: scale(1, 0);
-                                    -o-transform: scale(1, 0);
-                                    transform: scale(1, 0);
-                                }
-                                50% {
-                                    -webkit-transform-origin: 0% 0%;
-                                    -ms-transform-origin: 0% 0%;
-                                    -moz-transform-origin: 0% 0%;
-                                    -o-transform-origin: 0% 0%;
-                                    transform-origin: 0% 0%;
-                                    -webkit-transform: scale(1, 1);
-                                    -ms-transform: scale(1, 1);
-                                    -moz-transform: scale(1, 1);
-                                    -o-transform: scale(1, 1);
-                                    transform: scale(1, 1);
-                                }
-                                50.1% {
-                                    -webkit-transform-origin: 0% 100%;
-                                    -ms-transform-origin: 0% 100%;
-                                    -moz-transform-origin: 0% 100%;
-                                    -o-transform-origin: 0% 100%;
-                                    transform-origin: 0% 100%;
-                                    -webkit-transform: scale(1, 1);
-                                    -ms-transform: scale(1, 1);
-                                    -moz-transform: scale(1, 1);
-                                    -o-transform: scale(1, 1);
-                                    transform: scale(1, 1);
-                                }
-                                100% {
-                                    -webkit-transform-origin: 0% 100%;
-                                    -ms-transform-origin: 0% 100%;
-                                    -moz-transform-origin: 0% 100%;
-                                    -o-transform-origin: 0% 100%;
-                                    transform-origin: 0% 100%;
-                                    -webkit-transform: scale(1, 0);
-                                    -ms-transform: scale(1, 0);
-                                    -moz-transform: scale(1, 0);
-                                    -o-transform: scale(1, 0);
-                                    transform: scale(1, 0);
-                                }
-                            }
-                        </style>
-                        <div id="scroll-wrapper">
-                            <div id="scroll-wrapper-inner">
-                                <div id="scroll-title">Scroll</div>
-                                <div id="scroll-down"></div>
-                            </div>
-                        </div>
 
 
                         <div class="note">
@@ -700,67 +434,79 @@
 
     </main>
 
-    <!-- Messenger Chatmodul Code -->
-    <div id="fb-root"></div>
 
-    <!-- Your Chatmodul code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
 
-    <script>
-        /* close menu if menu iten is clicked */
-        var menu = document.getElementById('menu');
-        var closeIcon = document.getElementById("closeIcon");
 
-        menu.addEventListener('click', handleMenuClick);
 
-        function handleMenuClick(event) {
-            if (event.target instanceof HTMLAnchorElement) {
-                closeIcon.checked = false;
-            }
-        }
+<!-- Messenger Chatmodul Code -->
+<div id="fb-root"></div>
+<!-- Your Chatmodul code -->
+<div id="fb-customer-chat" class="fb-customerchat"></div>
+<!-- / Messenger Chatmodul Code -->
 
-        document.querySelectorAll('.nav__item a[href^="#"]')
-            .forEach(trigger => {
-                trigger.onclick = function(e) {
-                    e.preventDefault();
-                    let hash = this.getAttribute('href');
-                    let target = document.querySelector(hash);
-                    let headerOffset = 100;
-                    let elementPosition = target.offsetTop;
-                    let offsetPosition = elementPosition - headerOffset;
 
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: "smooth"
-                    });
 
-                };
-            });
+<script>
+// MENU
+// close menu if menu iten is clicked
+var menu = document.getElementById('menu');
+var closeIcon = document.getElementById("closeIcon");
 
-        // facebook messenger stuff
-        var chatbox = document.getElementById('fb-customer-chat');
-        chatbox.setAttribute("page_id", "108377287260909");
-        chatbox.setAttribute("attribution", "biz_inbox");
-        window.fbAsyncInit = function() {
-            FB.init({
-                xfbml: true,
-                version: 'v11.0'
-            });
-        };
+menu.addEventListener('click', handleMenuClick);
 
-        (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s);
-            js.id = id;
-            js.src = 'https://connect.facebook.net/hu_HU/sdk/xfbml.customerchat.js';
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
+function handleMenuClick(event) {
+    if (event.target instanceof HTMLAnchorElement) {
+        closeIcon.checked = false;
+    }
+}
+// MENU
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/zenscroll/4.0.2/zenscroll-min.js'></script>
+document.querySelectorAll('.nav__item a[href^="#"]').forEach(trigger => {
+    trigger.onclick = function(e) {
+        e.preventDefault();
+        let hash = this.getAttribute('href');
+        let target = document.querySelector(hash);
+        let headerOffset = 100;
+        let elementPosition = target.offsetTop;
+        let offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    };
+});
+
+// facebook messenger stuff
+var chatbox = document.getElementById('fb-customer-chat');
+chatbox.setAttribute("page_id", "108377287260909");
+chatbox.setAttribute("attribution", "biz_inbox");
+window.fbAsyncInit = function() {
+    FB.init({
+        xfbml: true,
+        version: 'v11.0'
+    });
+};
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = 'https://connect.facebook.net/hu_HU/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+// facebook messenger stuff
+
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/zenscroll/4.0.2/zenscroll-min.js'></script>
+
+
+
+
+
+
+
+
 
 </body>
-
 </html>
