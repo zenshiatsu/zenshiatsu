@@ -43,158 +43,75 @@
     </style>
     <!-- / layout -->
 
-    <!-- typo -->
     <style>
-        /* Base font-size for the document */
-html {
-    font-size: 100%; /* 1rem = 16px */
-}
-
-/* Body font-size using calc() */
-body {
-    font-size: calc(1rem + 0.5vw); /* Adjust font-size based on viewport width */
-    line-height: 1.5;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-/* Headings using calc() */
-h1 {
-    font-size: calc(2rem + 1vw); /* Scale with viewport width */
-    line-height: 1.2;
-    margin-bottom: 0.5em;
-}
-
-h2 {
-    font-size: calc(1.75rem + 0.75vw); /* Scale with viewport width */
-    line-height: 1.3;
-    margin-bottom: 0.5em;
-}
-
-h3 {
-    font-size: calc(1.5rem + 0.5vw); /* Scale with viewport width */
-    line-height: 1.4;
-    margin-bottom: 0.5em;
-}
-
-/* Additional Styles */
-p {
-    margin-bottom: 1em;
-}
-
-a {
-    color: blue;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-    </style>
-    <!-- / typo -->
-
-</head>
-<body>
-
-
-
-<style id="newsslider">
-
-    main {
-        min-height: 100vh;
-        background-color: aliceblue;
-    }
-
-
-
-
-</style>
-
-
-
-<header>
-    <nav>
-        nav
-    </nav>
-</header>
-
-
-
-<main>
-
-
-
-
-<article>
-
-</article>
-
-
-
-
-<style>
-    .slider {
-        background-color: beige;
-        display: flex;
-        flex: 1;
-        overflow-x: hidden;
-    }
-
-    .slider__item {
-        min-width: 100%;
-
-        display: flex;
-        flex: 1 1 1;
-        align-items: center;
-        flex-basis: fit-content;
-        justify-content: space-evenly;
-        padding: var(--margin-inner);
-
-        animation: slide 14s ease-in-out;
-        animation-iteration-count: infinite;
-    }
-
-    .slider__item:nth-child(1) {
-        background-color: burlywood;
-    }
-    .slider__item:nth-child(2) {
-        background-color: aqua;
-    }
-
-    .slider__item p {
-        width: 30%;
-    }
-    .slider__item img {
-        width: 30%
-        align-self: flex-start;
-    }
-
-    @keyframes slide {
-          0% { margin-left: 0 }
-         45% { margin-left: 0 }
-         50% { margin-left: -50% }
-         95% { margin-left: -50% }  
-        100% { margin-left: 0 }
-    }
-</style>
+        .slider {
+            background-color: beige;
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+      
+        .slider__track {
+            display: flex;
+            transition: transform 1s ease-in-out;
+            width: 100%; /* Double the width to fit both slides side by side */
+        }
+      
+        .slider__item {
+            min-width: 100%;
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: var(--margin-inner);
+            box-sizing: border-box;
+        }
+      
+        .slider__item:nth-child(1) {
+            background-color: burlywood;
+        }
+        .slider__item:nth-child(2) {
+            background-color: aqua;
+        }
+      
+        .slider__item p {
+            width: 30%;
+        }
+      
+        .slider__item img {
+            width: 30%;
+            align-self: flex-start;
+        }
+      
+        @keyframes slide {
+            0%, 45% {
+                transform: translateX(0);
+            }
+            50%, 95% {
+                transform: translateX(-100%);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+      
+        .slider__track {
+            animation: slide 14s ease-in-out infinite;
+        }
+      </style>
+      
 <article class="slider">
-
-    <div class="slider__item">
-        <img src="../content/a_szervora_a_hagyomanyos_kinai_orvoslasban_b1.webp" alt="" />
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facere fugiat facilis.</p>
+    <div class="slider__track">
+        <div class="slider__item">
+            <img src="https://via.placeholder.com/150" alt="Image 1" />
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate facere fugiat facilis.</p>
+        </div>
+        <div class="slider__item">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, nostrum, facilis temporibus laboriosam repellendus voluptates unde eos soluta similique, expedita voluptatibus debitis ullam? Voluptate vel minima voluptates, sequi ratione hic incidunt ut dolorum praesentium debitis minus eveniet, temporibus sit nulla nostrum modi optio porro?</p>
+            <img src="https://via.placeholder.com/150" alt="Image 2">
+        </div>
     </div>
-
-    <div class="slider__item">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, nostrum, facilis temporibus laboriosam repellendus voluptates unde eos soluta similique, expedita voluptatibus debitis ullam? Voluptate vel minima voluptates, sequi ratione hic incidunt ut dolorum praesentium debitis minus eveniet, temporibus sit nulla nostrum modi optio porro?</p>
-        <img src="../content/kampanykep.jpg" alt="">
-    </div>
-
 </article>
-
-
-
 
 
 </main>
